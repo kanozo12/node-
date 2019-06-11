@@ -20,11 +20,11 @@ db.serialize(()=>{
 
         let words = $(".rank_list .title");
         let time = $("._title_hms").text();
-        console.log(time);
+        
         words.each((idx, item)=>{
             let word = $(item).text();
 
             stmt.run([word, time]);
-        });
+        })
     });
 });
